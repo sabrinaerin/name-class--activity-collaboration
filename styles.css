@@ -1,0 +1,67 @@
+/* Basic styling */
+body {
+  font-family:'Courier New', Courier, monospace;
+  margin: 0; /* Remove whitespace */
+  padding: 0; /*Remove whitespace */
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 0; /* Removes default margin */
+}
+
+#product-list {
+  display: flex; /* Researched. Enables flexbox layout */
+  flex-wrap: wrap; 
+  gap: 20px;
+  padding: 20px; /* Adds space to the product list */
+  margin: 0; 
+}
+
+.product {
+  flex: 1 1 calc(33.33% - 20px);  /* Researched */
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.product a {
+  color: blue;
+  text-decoration: none;
+}
+
+.product a:hover {
+  color: red; /* Changes color to red when hovering */
+}
+
+.product a:visited {
+  color: pink; /* Changes color to pink for visited links */
+}
+
+.product a:active {
+  color: rgb(255, 0, 144); /* Changes color to hotpink when link is active */
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 0; /* Removes any default margin */
+}
+
+/* Clear floats to avoid parent collapse */
+#product-list::after {
+  content: "";
+  display: table;
+  clear: both;
+}
